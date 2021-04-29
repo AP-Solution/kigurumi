@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 * {
-	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Ubuntu', sans-serif;
 	list-style: none;
 }
 
 body {
-	background: rgb(136,28,102);
-	background: radial-gradient(circle, rgba(136,28,102,1) 0%, rgba(250,79,56,1) 100%);
+	margin: 0;
 }
 
 aside {
@@ -107,7 +105,7 @@ header {
 }
 main {
 	max-width: 1200px;
-	height: calc(100vh);
+	height: 100vh;
 	background: url('bg3-pink-medium.jpg') 50% 50% no-repeat;
 	background-attachment: fixed;
 	background-blend-mode: multiply;
@@ -134,13 +132,33 @@ main {
 section.slide_section {
 	width: 100%;
 	height: 100vh;
-	background-color: rgba(0,0,0,0.25);
+	background-color: rgba(255,215,0,1);
+	display: flex;
+	justify-content: center;
+	.banner {
+		width: 90%;
+		height: 400px;
+		margin-top: 50px;
+		background-size: cover;
+		background-color: rgba(255,255,255,0.7);
+		.banner_photo {
+			box-shadow: 0 0 33px 15px white;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;	
+			max-width: 100%;
+			max-height: 100%;
+			img {
+				max-height: 400px;
+			}
+		}
+	}
 }
 
 footer {
 	width: 100%;
-	height: 300px;
-	background-color: red;
+	//height: 300px;
+	//background-color: rgba(255,215,0,1);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -162,6 +180,24 @@ footer {
 		margin-top: auto;
 		a {
 			margin: 10px 0;
+		}
+	}
+	form {
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: 20px;
+		width: 60%;
+		height: 300px;
+		background-color: rgba(35,35,35,0.8);
+		.form_item {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 60px;
+			background-color: rgba(255,255,255,0.5);
 		}
 	}
 }
